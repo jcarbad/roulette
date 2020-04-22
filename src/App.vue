@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="flex justify-center bg-gray-200 h-screen">
+    <div class="block">
+      <Title></Title>
+      <Roulette></Roulette>
+      <Board></Board>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Title from "./components/atoms/Title.vue";
+import Roulette from './components/organisms/Roulette.vue';
+import Board from './components/organisms/Board.vue';
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Title,
+    Roulette,
+    Board
   }
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
